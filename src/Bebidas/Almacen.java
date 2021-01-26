@@ -50,7 +50,9 @@ public class Almacen {
 		float precioTotal=0;
 		
 		for (int i = 0; i < mEstanteria.length; i++) {
-			
+			for (int j = 0; j < mEstanteria.length; j++) {
+				
+			}
 		}
 		
 		return precioTotal;
