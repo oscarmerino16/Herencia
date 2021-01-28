@@ -51,14 +51,57 @@ public class Almacen {
 		
 		for (int i = 0; i < mEstanteria.length; i++) {
 			for (int j = 0; j < mEstanteria.length; j++) {
+<<<<<<< HEAD
 				
+=======
+				if (mEstanteria[i][j]!=null && i==1) {
+					precioTotal += mEstanteria[i][j].getPrecio();
+				}
+>>>>>>> main
 			}
 		}
 		
 		return precioTotal;
 		
 	}
-
+	
+	
+public void addProducto() {
+		
+		Azucarada a = new Azucarada("951", 9, 9, "cola loca", 9, false);
+		String cod=a.getId();
+		boolean esta = false, para=false;
+		
+		
+		for (int i = 0; i < mEstanteria.length; i++) {
+			for (int j = 0; j < mEstanteria.length; j++) {
+				if (mEstanteria[i][j]!=null && mEstanteria[i][j].getId().equalsIgnoreCase(cod)) {
+					esta=true;
+					System.out.println("Tu producto ya esta en stock");
+					break;
+				}
+			}
+		}
+		
+		if (esta==false) {
+			for (int i = 0; i < mEstanteria.length; i++) {
+				for (int j = 0; j < mEstanteria.length; j++) {
+					if (mEstanteria[i][j]==null) {
+						mEstanteria[i][j]=a;
+						System.out.println("Producto añadido");
+						para=true;
+						break;
+					}
+				}
+				if (para==true) {
+					break;
+				}
+			}
+		}
+		
+	}
+	
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -69,7 +112,19 @@ public class Almacen {
 
 	@Override
 	public String toString() {
-		return "Almacen [nombre=" + nombre + ", mEstanteria=" + Arrays.toString(mEstanteria) + "]";
+String info= "";
+		
+		for (int i = 0; i < mEstanteria.length; i++) {
+			for (int j = 0; j < mEstanteria.length; j++) {
+				if (mEstanteria[i][j]!=null) {
+					info += mEstanteria[i][j].toString();
+				}
+			}
+		}
+		
+		return "Esto es lo que hay en el almacen \n"+info+"\n";
+		
+	}
 	}
 
 	
@@ -79,4 +134,4 @@ public class Almacen {
 	
 	
 	
-}
+
