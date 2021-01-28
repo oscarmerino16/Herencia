@@ -51,13 +51,13 @@ public class Almacen {
 		
 		for (int i = 0; i < mEstanteria.length; i++) {
 			for (int j = 0; j < mEstanteria.length; j++) {
-<<<<<<< HEAD
+
 				
-=======
+
 				if (mEstanteria[i][j]!=null && i==1) {
 					precioTotal += mEstanteria[i][j].getPrecio();
 				}
->>>>>>> main
+
 			}
 		}
 		
@@ -66,7 +66,7 @@ public class Almacen {
 	}
 	
 	
-public void addProducto() {
+	public void addProducto() {
 		
 		Azucarada a = new Azucarada("951", 9, 9, "cola loca", 9, false);
 		String cod=a.getId();
@@ -88,7 +88,7 @@ public void addProducto() {
 				for (int j = 0; j < mEstanteria.length; j++) {
 					if (mEstanteria[i][j]==null) {
 						mEstanteria[i][j]=a;
-						System.out.println("Producto añadido");
+						System.out.println("Producto aï¿½adido");
 						para=true;
 						break;
 					}
@@ -112,7 +112,7 @@ public void addProducto() {
 
 	@Override
 	public String toString() {
-String info= "";
+		String info= "";
 		
 		for (int i = 0; i < mEstanteria.length; i++) {
 			for (int j = 0; j < mEstanteria.length; j++) {
